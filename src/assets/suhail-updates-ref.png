@@ -1,0 +1,169 @@
+Keep the entire Suhail app unchanged.
+
+Modify ONLY:
+1. the indoor floor map structure and spatial clarity
+2. the active navigation experience
+
+Do NOT change:
+- the bottom navigation
+- the Ask Suhail button
+- the search bar
+- the color palette
+- the Schedule screen
+- the Game screen
+- the Profile screen
+- the appointment flow
+- the overall app structure or branding
+
+==================================================
+PART 1 — FIX THE INDOOR MAP
+==================================================
+
+The current indoor map looks like disconnected room cards floating on a background.
+
+Redesign the map so it clearly reads as a REAL university building with understandable circulation.
+
+VERY IMPORTANT:
+The user must immediately understand:
+- this is a corridor
+- this is a room
+- this is a wall
+- this is a door
+- this is where I walk
+- this is where the stairs and elevator are
+
+Redesign the floor plan with:
+
+- wide, continuous corridors connecting all rooms
+- a clear main central corridor
+- smaller secondary corridors branching from it
+- clearly defined walls
+- visible room entrances / doors opening into corridors
+- realistic spacing and proportions between rooms
+- realistic university layout logic
+- stairs and elevator physically integrated into the building circulation
+- proper connection between classrooms, lecture hall, study area, faculty offices, and student lounge
+
+Use clear architectural hierarchy:
+
+ROOMS:
+- slightly raised 2.5D / isometric room volumes
+- soft shadows
+- clear labels
+
+CORRIDORS:
+- wider and visually obvious
+- clearly different floor material/color from rooms
+- continuous and unobstructed
+- one of the clearest visual elements of the map
+
+DOORS:
+- visible openings between rooms and corridors
+
+STAIRS / ELEVATOR:
+- built into the plan, not floating like UI buttons
+- use clear stair/elevator symbols
+
+Make the map resemble a premium modern indoor campus navigation map, similar in feel to Concept3D.
+
+Do NOT arrange rooms like UI cards.
+
+Do NOT leave large empty meaningless spaces.
+
+The floor plan should make sense as a BUILDING first, then as a beautiful app map.
+
+==================================================
+PART 2 — TWO VISUAL MODES
+==================================================
+
+The app must use TWO different visual modes:
+
+1. BROWSING MODE
+- Used when exploring the building, searching, or selecting a destination
+- Keep this mode as a polished 2.5D / isometric indoor university map
+- This is the normal map mode
+
+2. ACTIVE NAVIGATION MODE
+- When the user presses “Start Navigation”, switch into a FIRST-PERSON indoor walking perspective
+- This first-person perspective must become the main visual experience during navigation
+- The user should feel like they are walking through a real university building
+
+==================================================
+PART 3 — FIRST-PERSON NAVIGATION
+==================================================
+
+When active navigation begins, do NOT keep the top-down map as the main view.
+
+Instead, show a FIRST-PERSON indoor corridor view from normal human eye level.
+
+The user should appear to be walking inside a university building.
+
+The first-person environment should include:
+- university hallways
+- classroom doors
+- room numbers
+- corridor turns
+- stairs and elevators
+- lobby / study area transitions
+- signage and directional cues
+- destination indicators
+
+Examples of instruction overlays:
+- “Continue straight — 25 m”
+- “Turn right after the study area”
+- “Take the stairs to Floor 2”
+- “B203 is on your right”
+
+During active navigation, show:
+- first-person corridor environment as the main visual
+- a directional arrow overlay
+- current instruction
+- remaining distance
+- estimated walking time
+- destination label
+- an optional small mini-map as a secondary aid only
+
+The mini-map must stay small and secondary.
+The first-person view must remain dominant.
+
+Do NOT make active navigation look like:
+- car navigation
+- city navigation
+- a top-down floor plan
+- a third-person game
+- an architectural blueprint
+
+==================================================
+PART 4 — TRANSITIONS
+==================================================
+
+The flow should work like this:
+
+2.5D indoor map browsing mode
+→ search for B203
+→ select B203
+→ tap “Start Navigation”
+→ smooth transition into first-person indoor walking view
+→ follow corridor directions
+→ if needed, show floor transition
+→ continue first-person walking view
+→ arrive at B203
+→ show check-in / arrival / +50 points
+
+The transition between map mode and first-person mode should feel smooth, premium, and suitable for a hackathon demo video.
+
+==================================================
+PART 5 — FINAL QUALITY
+==================================================
+
+The result must clearly communicate:
+
+- browsing and search happen in a clear 2.5D indoor map
+- actual navigation happens in a first-person walking view
+- the indoor map has clear circulation and realistic architecture
+- the user feels guided through a real university building
+- the experience is immersive, polished, and visually strong
+
+IMPORTANT:
+Do not redesign the rest of the application.
+Only improve the indoor map clarity and active navigation experience.

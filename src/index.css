@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #0E4A46;
+  --color-primary-light: #8FAF9C26;
+  --color-primary-dark: #0A3535;
+  --color-secondary: #2F6F62;
+  --color-sage: #8FAF9C;
+  --color-sand: #D7BF88;
+  --color-orange: #E4A756;
+  --color-sky: #8DC8D3;
+  --color-surface: #F8F7F2;
+  --color-muted: #2F6F62;
+  --color-border: #8FAF9C66;
+  --font-sans: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+:root {
+  /* Official SUHAIL teal identity */
+  --suhail-teal-900: #0A3535;
+  --suhail-teal-800: #0E4A46;
+  --suhail-green-600: #2F6F62;
+  --suhail-sage-400: #8FAF9C;
+  --suhail-sky-400: #8DC8D3;
+  --suhail-orange-500: #E4A756;
+  /* Compatibility aliases used by the existing component foundations. */
+  --suhail-navy-950: #0A3535;
+  --suhail-navy-900: #0E4A46;
+  --suhail-navy-800: #0E4A46;
+  --suhail-blue-700: #2F6F62;
+  --suhail-blue-600: #2F6F62;
+  --suhail-blue-100: #8FAF9C26;
+  --suhail-sand-500: #D7BF88;
+  --suhail-sand-100: #F2E9DE;
+  --suhail-off-white: #F8F7F2;
+
+  /* Product neutrals and restrained system colors */
+  --suhail-ink: #0A3535;
+  --suhail-text-secondary: #2F6F62;
+  --suhail-text-disabled: #9BA4AE;
+  --suhail-border: #8FAF9C66;
+  --suhail-divider: #8FAF9C4D;
+  --suhail-surface-subtle: #F2EFE9;
+  --suhail-disabled: #8FAF9C40;
+  --suhail-success: #2F6F62;
+  --suhail-warning: #E4A756;
+  --suhail-error: #A34848;
+  --suhail-info: #2F6F62;
+
+  /* 4px mobile-first spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Restrained shape and elevation scale */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-sheet: 20px;
+  --shadow-low: 0 2px 8px rgba(10, 53, 53, 0.06);
+  --shadow-raised: 0 6px 18px rgba(10, 53, 53, 0.09);
+
+  /* Typography roles */
+  --font-en: 'Inter', sans-serif;
+  --font-ar: 'IBM Plex Sans Arabic', sans-serif;
+  --type-display: 40px;
+  --type-h1: 30px;
+  --type-h2: 24px;
+  --type-h3: 20px;
+  --type-section: 16px;
+  --type-body: 15px;
+  --type-body-secondary: 14px;
+  --type-label: 14px;
+  --type-nav: 11px;
+  --type-caption: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0A3535;
+  font-family: 'Inter', sans-serif;
+}
+
+[lang='ar'],
+[dir='rtl'] {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* Reusable SUHAIL component foundations for current and future screens. */
+.suhail-button {
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font: 600 var(--type-label)/1 var(--font-en);
+  cursor: pointer;
+}
+
+.suhail-button--primary {
+  color: var(--suhail-off-white);
+  background: var(--suhail-navy-900);
+}
+
+.suhail-button--secondary {
+  color: var(--suhail-blue-700);
+  background: var(--suhail-off-white);
+  border-color: var(--suhail-blue-600);
+}
+
+.suhail-button--text {
+  color: var(--suhail-blue-600);
+  background: transparent;
+}
+
+.suhail-input,
+.suhail-search {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 var(--space-4);
+  color: var(--suhail-ink);
+  background: var(--suhail-off-white);
+  border: 1px solid var(--suhail-border);
+  border-radius: var(--radius-md);
+  font: 400 var(--type-body)/1.4 var(--font-en);
+  outline: none;
+}
+
+.suhail-input:focus,
+.suhail-search:focus {
+  border-color: var(--suhail-blue-600);
+  box-shadow: 0 0 0 3px rgba(59, 110, 168, 0.12);
+}
+
+.suhail-card,
+.suhail-location-card,
+.suhail-faculty-card,
+.suhail-appointment-card {
+  color: var(--suhail-ink);
+  background: var(--suhail-off-white);
+  border: 1px solid var(--suhail-divider);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-low);
+}
+
+.suhail-chip,
+.suhail-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 var(--space-3);
+  color: var(--suhail-blue-700);
+  background: var(--suhail-blue-100);
+  border-radius: var(--radius-sm);
+  font: 500 var(--type-caption)/1 var(--font-en);
+}
+
+.suhail-sheet,
+.suhail-modal {
+  color: var(--suhail-ink);
+  background: var(--suhail-off-white);
+  border: 1px solid var(--suhail-divider);
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  box-shadow: var(--shadow-raised);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes route-draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(140px) rotate(720deg); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.38s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-route-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: route-draw 1.5s ease forwards;
+}
+
+.animate-float-in {
+  animation: float-in 0.4s ease forwards;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,11 @@
+{
+  "title": "suhail",
+  "description": "Streamline task management and collaboration for teams by providing an intuitive platform to assign, track, and complete projects efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
